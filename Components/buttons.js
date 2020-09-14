@@ -1,79 +1,79 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 function Buttons() {
 	return (
 		<View style={styles.buttonRoot}>
 			<View style={styles.buttonRow}>
-				<View style={styles.buttonColorSpecial}>
+				<TouchableOpacity style={styles.buttonColorSpecial}>
 					<Text style={styles.buttonText}>C</Text>
-				</View>
-				<View style={styles.buttonColorSpecial}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorSpecial}>
 					<Text style={styles.buttonText}>+/-</Text>
-				</View>
-				<View style={styles.buttonColorSpecial}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorSpecial}>
 					<Text style={styles.buttonText}>%</Text>
-				</View>
-				<View style={styles.buttonColorArithmatic}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorArithmatic}>
 					<Text style={styles.buttonText}>/</Text>
-				</View>
+				</TouchableOpacity>
 			</View>
 
 			<View style={styles.buttonRow}>
-				<View style={styles.buttonColorNumbers}>
+				<TouchableOpacity style={styles.buttonColorNumbers}>
 					<Text style={styles.buttonText}>7</Text>
-				</View>
-				<View style={styles.buttonColorNumbers}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorNumbers}>
 					<Text style={styles.buttonText}>8</Text>
-				</View>
-				<View style={styles.buttonColorNumbers}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorNumbers}>
 					<Text style={styles.buttonText}>9</Text>
-				</View>
-				<View style={styles.buttonColorArithmatic}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorArithmatic}>
 					<Text style={styles.buttonText}>x</Text>
-				</View>
+				</TouchableOpacity>
 			</View>
 
 			<View style={styles.buttonRow}>
-				<View style={styles.buttonColorNumbers}>
+				<TouchableOpacity style={styles.buttonColorNumbers}>
 					<Text style={styles.buttonText}>4</Text>
-				</View>
-				<View style={styles.buttonColorNumbers}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorNumbers}>
 					<Text style={styles.buttonText}>5</Text>
-				</View>
-				<View style={styles.buttonColorNumbers}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorNumbers}>
 					<Text style={styles.buttonText}>6</Text>
-				</View>
-				<View style={styles.buttonColorArithmatic}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorArithmatic}>
 					<Text style={styles.buttonText}>-</Text>
-				</View>
+				</TouchableOpacity>
 			</View>
 
 			<View style={styles.buttonRow}>
-				<View style={styles.buttonColorNumbers}>
+				<TouchableOpacity style={styles.buttonColorNumbers}>
 					<Text style={styles.buttonText}>1</Text>
-				</View>
-				<View style={styles.buttonColorNumbers}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorNumbers}>
 					<Text style={styles.buttonText}>2</Text>
-				</View>
-				<View style={styles.buttonColorNumbers}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorNumbers}>
 					<Text style={styles.buttonText}>3</Text>
-				</View>
-				<View style={styles.buttonColorArithmatic}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorArithmatic}>
 					<Text style={styles.buttonText}>+</Text>
-				</View>
+				</TouchableOpacity>
 			</View>
 
 			<View style={styles.buttonRow}>
-				<View style={styles.buttonColorNumberZero}>
+				<TouchableOpacity style={styles.buttonColorNumberZero}>
 					<Text style={styles.buttonText}>0</Text>
-				</View>
-				<View style={styles.buttonColorNumbers}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorNumbers}>
 					<Text style={styles.buttonText}>.</Text>
-				</View>
-				<View style={styles.buttonColorArithmatic}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.buttonColorArithmatic}>
 					<Text style={styles.buttonText}>=</Text>
-				</View>
+				</TouchableOpacity>
 			</View>
 		</View>
 	);
