@@ -17,7 +17,10 @@ function Screen() {
 const styles = StyleSheet.create({
 	screenRoot: {
 		width: "100%",
-		height: "35%",
+		height: "34%",
+		backgroundColor: "#4c4c4c",
+		marginBottom: "2%",
+		borderRadius: 20,
 	},
 	screenInput: {
 		width: "100%",
