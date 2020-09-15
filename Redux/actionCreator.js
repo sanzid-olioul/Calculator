@@ -7,6 +7,8 @@ import {
 	CLEAR_ALL,
 	NUMBER_INPUT,
 	EQUAL_BUTTON,
+	NEGET_RESULT,
+	DECIMAL_POINT,
 } from "./acationType";
 
 export const addNumber = () => {
@@ -34,6 +36,11 @@ export const modulasNumber = () => {
 		type: MODULAS_NUMBER,
 	};
 };
+export const negateResult = () => {
+	return {
+		type: NEGET_RESULT,
+	};
+};
 export const clearAll = () => {
 	return {
 		type: CLEAR_ALL,
@@ -45,8 +52,14 @@ export const numberInput = (number) => {
 		payload: number,
 	};
 };
+
 export const equalButton = () => {
 	return {
 		type: EQUAL_BUTTON,
+	};
+};
+export const decimalPoint = () => {
+	return {
+		type: DECIMAL_POINT,
 	};
 };

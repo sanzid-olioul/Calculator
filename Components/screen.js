@@ -7,9 +7,15 @@ import store from "../Redux/store";
 function Screen() {
 	const input = useSelector((state) => state.number);
 	const result = useSelector((state) => state.result);
+	const prev = useSelector((state) => state.inputs);
 	return (
 		<View style={styles.screenRoot}>
 			<View style={styles.screenInput}>
+				{prev.map((inp) => (
+					<Text key={Math.random()} style={styles.screenInputText}>
+						{inp}
+					</Text>
+				))}
 				<Text style={styles.screenInputText}>{input}</Text>
 			</View>
 
@@ -29,11 +35,15 @@ const styles = StyleSheet.create({
 	},
 	screenInput: {
 		width: "100%",
-		height: "65%",
+		height: "68%",
+		overflow: "hidden",
+		flexDirection: "row",
+		flexWrap: "wrap",
 	},
 	screenSum: {
 		width: "100%",
-		height: "35%",
+		height: "32%",
+		overflow: "hidden",
 	},
 	screenInputText: {
 		fontSize: 48,

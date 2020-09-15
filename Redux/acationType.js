@@ -6,3 +6,5 @@ export const MODULAS_NUMBER = "MODULAS_NUMBER";
 export const CLEAR_ALL = "CLEAR_ALL";
 export const NUMBER_INPUT = "NUMBER_INPUT";
 export const EQUAL_BUTTON = "EQUAL_BUTTON";
+export const NEGET_RESULT = "NEGET_RESULT";
+export const DECIMAL_POINT = "DECIMAL_POINT";

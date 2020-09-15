@@ -10,6 +10,8 @@ import {
 	clearAll,
 	numberInput,
 	equalButton,
+	negateResult,
+	decimalPoint,
 } from "../Redux/actionCreator";
 
 function Buttons() {
@@ -24,7 +26,7 @@ function Buttons() {
 					<Text style={styles.buttonText}>C</Text>
 				</TouchableOpacity>
 				<TouchableOpacity
-					onPress={() => console.log("jani na")}
+					onPress={() => dispatch(negateResult())}
 					style={styles.buttonColorSpecial}
 				>
 					<Text style={styles.buttonText}>+/-</Text>
@@ -132,7 +134,7 @@ function Buttons() {
 					<Text style={styles.buttonText}>0</Text>
 				</TouchableOpacity>
 				<TouchableOpacity
-					onPress={() => dispatch()}
+					onPress={() => dispatch(decimalPoint())}
 					style={styles.buttonColorNumbers}
 				>
 					<Text style={styles.buttonText}>.</Text>
