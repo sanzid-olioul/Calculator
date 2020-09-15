@@ -1,26 +1,31 @@
 {
-  "expo": {
-    "name": "Calculator",
-    "slug": "Calculator",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/calculator.png",
-    "splash": {
-      "image": "./assets/calculator.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "web": {
-      "favicon": "./assets/calculator.png"
-    }
-  }
+	"expo": {
+		"name": "Calculator",
+		"slug": "Calculator",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/calculator.png",
+		"sdkVersion": "38.0.0",
+		"android": {
+			"package": "com.sanzid.olioul.calculator",
+			"versionCode": 1,
+			"icon": "./assets/calculator.png"
+		},
+
+		"splash": {
+			"image": "./assets/calculator.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"updates": {
+			"fallbackToCacheTimeout": 0
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": true
+		},
+		"web": {
+			"favicon": "./assets/calculator.png"
+		}
+	}
 }

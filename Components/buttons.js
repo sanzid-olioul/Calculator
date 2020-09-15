@@ -20,6 +20,7 @@ function Buttons() {
 		<View style={styles.buttonRoot}>
 			<View style={styles.buttonRow}>
 				<TouchableOpacity
+					onLongPress={() => dispatch(clearAll())}
 					onPress={() => dispatch(clearAll())}
 					style={styles.buttonColorSpecial}
 				>

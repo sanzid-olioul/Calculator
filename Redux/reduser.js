@@ -55,41 +55,75 @@ const reduser = (state = InitialState, action) => {
 			let arr = state.inputs;
 			arr.push(state.number);
 			arr.push("-");
-			return {
-				...state,
-				point: false,
-				result: state.result + state.number,
-				number: null,
-				operator: "-",
-				inputs: arr,
-				//number: state.number * -1,
-			};
+			if (state.result === null) {
+				return {
+					...state,
+					point: false,
+					result: state.result + state.number,
+					number: null,
+					operator: "-",
+					inputs: arr,
+					//number: state.number * -1,
+				};
+			} else {
+				return {
+					...state,
+					point: false,
+					//result: state.result + state.number,
+					number: null,
+					operator: "-",
+					inputs: arr,
+					//number: state.number * -1,
+				};
+			}
 		}
 		case MULTIPLY_NUMBER: {
 			let arr = state.inputs;
 			arr.push(state.number);
 			arr.push("x");
-			return {
-				...state,
-				point: false,
-				result: state.result + state.number,
-				number: null,
-				operator: "x",
-				inputs: arr,
-			};
+			if (state.result === null) {
+				return {
+					...state,
+					point: false,
+					result: state.result + state.number,
+					number: null,
+					operator: "x",
+					inputs: arr,
+				};
+			} else {
+				return {
+					...state,
+					point: false,
+					//result: state.result + state.number,
+					number: null,
+					operator: "x",
+					inputs: arr,
+				};
+			}
 		}
 		case DEVIDE_NUMBER: {
 			let arr = state.inputs;
 			arr.push(state.number);
 			arr.push("/");
-			return {
-				...state,
-				point: false,
-				result: state.result + state.number,
-				number: null,
-				operator: "/",
-				inputs: arr,
-			};
+			if (state.result === null) {
+				return {
+					...state,
+					point: false,
+					result: state.result + state.number,
+					number: null,
+					operator: "/",
+					inputs: arr,
+				};
+			} else {
+				return {
+					...state,
+					point: false,
+					//result: state.result + state.number,
+					number: null,
+					operator: "/",
+					inputs: arr,
+				};
+			}
 		}
 		case MODULAS_NUMBER: {
 			if (state.number != 0 || state.number != null) {
@@ -99,7 +133,7 @@ const reduser = (state = InitialState, action) => {
 				return {
 					...state,
 					point: false,
-					result: state.result + state.number,
+					//result: state.result + state.number,
 					number: null,
 					operator: "%",
 					inputs: arr,
@@ -107,6 +141,11 @@ const reduser = (state = InitialState, action) => {
 			} else {
 				return {
 					...state,
+					point: false,
+					result: state.result + state.number,
+					number: null,
+					operator: "%",
+					inputs: arr,
 				};
 			}
 		}
@@ -140,6 +179,8 @@ const reduser = (state = InitialState, action) => {
 					...state,
 					point: false,
 					result: state.result + state.number,
+					inputs: [state.result + state.number],
+					number: null,
 				};
 			}
 			if (state.operator === "-") {
@@ -147,6 +188,8 @@ const reduser = (state = InitialState, action) => {
 					...state,
 					point: false,
 					result: state.result - state.number,
+					inputs: [state.result - state.number],
+					number: null,
 				};
 			}
 			if (state.operator === "x") {
@@ -154,6 +197,8 @@ const reduser = (state = InitialState, action) => {
 					...state,
 					point: false,
 					result: state.result * state.number,
+					inputs: [state.result * state.number],
+					number: null,
 				};
 			}
 			if (state.operator === "/") {
@@ -161,6 +206,8 @@ const reduser = (state = InitialState, action) => {
 					...state,
 					point: false,
 					result: state.result / state.number,
+					inputs: [state.result / state.number],
+					number: null,
 				};
 			}
 			if (state.operator === "%") {
@@ -168,6 +215,8 @@ const reduser = (state = InitialState, action) => {
 					...state,
 					point: false,
 					result: state.result % state.number,
+					inputs: [state.result % state.number],
+					number: null,
 				};
 			}
 		}
