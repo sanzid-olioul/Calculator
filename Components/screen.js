@@ -1,15 +1,20 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
+import { useSelector } from "react-redux";
+import store from "../Redux/store";
+
 function Screen() {
+	const input = useSelector((state) => state.number);
+	const result = useSelector((state) => state.result);
 	return (
 		<View style={styles.screenRoot}>
 			<View style={styles.screenInput}>
-				<Text style={styles.screenInputText}></Text>
+				<Text style={styles.screenInputText}>{input}</Text>
 			</View>
 
 			<View style={styles.screenSum}>
-				<Text style={styles.screenSumText}></Text>
+				<Text style={styles.screenSumText}>{result}</Text>
 			</View>
 		</View>
 	);
